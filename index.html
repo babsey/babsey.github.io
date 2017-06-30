@@ -1,5 +1,158 @@
-<html>
+<html ng-app="CVApp">
+
+<head>
+    <title>Sebastian Spreizer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="app.module.js"></script>
+    <script type="text/javascript" src="publication-list/publication-list.module.js"></script>
+    <script type="text/javascript" src="publication-list/publication-list.component.js"></script>
+</head>
+
 <body>
-    <h3>Hello world!<h3>
+    <!-- <div class="jumbotron text-center">
+        <h1 class="title">Network activity dynamics</h1>
+    </div> -->
+
+    <div class="container">
+        <ul class="nav justify-content-end">
+            <!-- <li class="nav-item">
+                <a class="nav-link active" href="#about">About</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="#cards">Skills and archievements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#publications">Publications</a>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-5">
+
+                <img src="assets/img/spreizer.png">
+
+                <div style="padding:20px 0">
+                    <dl>
+                        <dt>Sebastian Spreizer</dt>
+                        <dd>PhD candidate</dd>
+                        <dt>Works for</dt>
+                        <dd>University of Freiburg</dd>
+                        <dt>Address</dt>
+                        <dd>Hansastr. 9a</dd>
+                        <dd>79104 Freiburg</dd>
+                        <dt>E-mail</dt>
+                        <dd>sebastian.spreizer@bcf.uni-freiburg.de</dd>
+                        <dt>Telephone </dt>
+                        <dd>+49 761 203 9555</dd>
+                    </dl>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-9 col-md-8 col-sm-7">
+                <div id="about" class="panel">
+                    I am a PhD candidate in computational neuroscience at University of Freiburg supervised by Prof. Ad Aertsen and Prof. Arvind Kumar.
+                    <br>
+                    What role do the network connectivity and network dynamics play in the transfer of information from one network to another, how neurons interact with network structure to shape the network activity dynamics
+                    How the activity dynamics of the network and information transfer can be controlled by external stimulation.
+                    <br>
+                    <br> To this end we use analytical methods from statistical mechanics, probability theory, graph theory and control systems theory, and combine them with numerical simulations of large-scale neuronal networks of different brain regions.
+                    The overall goal of this line of work is to develop mathematical models of brain diseases and create a theoretical framework to understand the mechanisms underlying the emergence of disease related aberrant activity dynamics in diseases
+                    (e.g. Parkinson's diseases, epilepsy, anxiety). Eventually such a quantitive understanding of brain diseases would pave the way for the development of novel brain stimulation protocols to control or correct the disease-related brain
+                    activity. To this end, we are also neuralizing the control system theory and developing tools to control the dynamics of neuronal networks by external stimulations methods.
+                </div>
+
+                <div id="keywords" class="panel">
+                    <h4 >Research keywords</h4>
+                    Computational neuroscience, network dynamics, brain disease, bump activity, bump sequence, inhibitory networks</p>
+                </div>
+
+                <div id="cards" class="panel">
+                    <h4 >Skills and archievements</h4>
+                    <div class="card-columns">
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Programming languages</h4>
+                                <p class="card-text">Python, JavaScript, Bash, Matlab, Java, Julia, TypeScript</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Data analysis</h4>
+                                <p class="card-text">Big data, Statistics, Machine learning</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Numerical simulations</h4>
+                                <p class="card-text">NEST, Neuron</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Contributions to open-source projects</h4>
+                                <p class="card-text">Sumatra</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Web developments</h4>
+                                <p class="card-text">D3js, Bootstrap, jQuery, Nodejs, AngularJS</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Developed webpages</h4>
+                                <p class="card-text">nuSPIC</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Web server packages</h4>
+                                <p class="card-text">Django, Flask</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Application developments</h4>
+                                <p class="card-text">Nodejs, Electron</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Developed applications</h4>
+                                <p class="card-text">NEST desktop, Braitenberg vehicles</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Version managements</h4>
+                                <p class="card-text">Git, SVN</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Database managements</h4>
+                                <p class="card-text">Sqlite, MySQL, PostgreSQL, CouchDB, NEDB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use a custom component to render a list of publications -->
+                <publication-list id="publications" class="panel"></publication-list>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script> -->
 </body>
+
 </html>
