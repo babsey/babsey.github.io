@@ -1,0 +1,47 @@
+- title: NEST Desktop, an Educational Application for Neuroscience
+  authors: Sebastian Spreizer, Johanna Senk, Stefan Rotter, Markus Diesmann & Benjamin Weyers
+  journal: eNeuro
+  year: 2021
+  volume: 8
+  issue: 6
+  pages: ENEURO.0274-21.2021
+  DOI: 10.1523/ENEURO.0274-21.2021
+  id: nest-desktop
+  image: nest-desktop.jpg
+  abstract: "Simulation software for spiking neuronal network models matured in the past decades regarding performance and flexibility. But the entry barrier remains high for students and early career scientists in computational neuroscience since these simulators typically require programming skills and a complex installation. Here, we describe an installation-free Graphical User Interface (GUI) running in the web browser, which is distinct from the simulation engine running anywhere, on the student’s laptop or on a supercomputer. This architecture provides robustness against technological changes in the software stack and simplifies deployment for self-education and for teachers. Our new open-source tool, NEST Desktop, comprises graphical elements for creating and configuring network models, running simulations, and visualizing and analyzing the results. NEST Desktop allows students to explore important concepts in computational neuroscience without the need to learn a simulator control language before. Our experiences so far highlight that NEST Desktop helps advancing both quality and intensity of teaching in computational neuroscience in regular university courses. We view the availability of the tool on public resources like the European ICT infrastructure for neuroscience EBRAINS as a contribution to equal opportunities."
+
+- title: "From space to time: Spatial inhomogeneities lead to the emergence of spatiotemporal sequences in spiking neuronal networks"
+  authors: Sebastian Spreizer, Ad Aertsen & Arvind Kumar
+  journal: PLoS Computational Biology
+  year: 2019
+  volume: 15
+  issue: 10
+  pages: e1007432
+  DOI: 10.1371/journal.pcbi.1007432
+  id: spatial-sequence
+  image: spatial-sequence.jpg
+  abstract: "Spatio-temporal sequences of neuronal activity are observed in many brain regions in a variety of tasks and are thought to form the basis of meaningful behavior. However, mechanisms by which a neuronal network can generate spatio-temporal activity sequences have remained obscure. Existing models are biologically untenable because they either require manual embedding of a feedforward network within a random network or supervised learning to train the connectivity of a network to generate sequences. Here, we propose a biologically plausible, generative rule to create spatio-temporal activity sequences in a network of spiking neurons with distance-dependent connectivity. We show that the emergence of spatio-temporal activity sequences requires: (1) individual neurons preferentially project a small fraction of their axons in a specific direction, and (2) the preferential projection direction of neighboring neurons is similar. Thus, an anisotropic but correlated connectivity of neuron groups suffices to generate spatio-temporal activity sequences in an otherwise random neuronal network model."
+
+- title: "Activity Dynamics and Signal Representation in a Striatal Network Model with Distance-Dependent Connectivity"
+  authors: Sebastian Spreizer, Martin Angelhuber, Jyotika Bahuguna, Ad Aertsen & Arvind Kumar
+  journal: eNeuro
+  year: 2017
+  volume: 4
+  issue: 4
+  pages: ENEURO.0348-16.2017
+  DOI: 10.1523/ENEURO.0348-16.2017
+  id: bump-activity
+  image: bump-activity.jpg
+  abstract: "The striatum is the main input nucleus of the basal ganglia. Characterizing striatal activity dynamics is crucial to understanding mechanisms underlying action selection, initiation, and execution. Here, we studied the effects of spatial network connectivity on the spatiotemporal structure of striatal activity. We show that a striatal network with nonmonotonically changing distance-dependent connectivity (according to a gamma distribution) can exhibit a wide repertoire of spatiotemporal dynamics, ranging from spatially homogeneous, asynchronous-irregular (AI) activity to a state with stable, spatially localized activity bumps, as in “winner-take-all” (WTA) dynamics. Among these regimes, the unstable activity bumps [transition activity (TA)] regime closely resembles the experimentally observed spatiotemporal activity dynamics and neuronal assemblies in the striatum. In contrast, striatal networks with monotonically decreasing distance-dependent connectivity (in a Gaussian fashion) can exhibit only an AI state. Thus, given the observation of spatially compact neuronal clusters in the striatum, our model suggests that recurrent connectivity among striatal projection neurons should vary nonmonotonically. In brain disorders such as Parkinson’s disease, increased cortical inputs and high striatal firing rates are associated with a reduction in stimulus sensitivity. Consistent with this, our model suggests that strong cortical inputs drive the striatum to a WTA state, leading to low stimulus sensitivity and high variability. In contrast, the AI and TA states show high stimulus sensitivity and reliability. Thus, based on these results, we propose that in a healthy state the striatum operates in a AI/TA state and that lack of dopamine pushes it into a WTA state."
+
+- title: "Neural system prediction and identification challenge"
+  authors: Vlachos I, Zaytsev Y, Spreizer S, Aertsen A & Kumar A
+  journal: Front Neuroinform
+  year: 2013
+  volume: Dec
+  issue: 7
+  pages: 43
+  DOI: 10.3389/fninf.2013.00043
+  id: nuspic
+  image: nuspic.jpg
+  abstract: "Can we infer the function of a biological neural network (BNN) if we know the connectivity and activity of all its constituent neurons?This question is at the core of neuroscience and, accordingly, various methods have been developed to record the activity and connectivity of as many neurons as possible. Surprisingly, there is no theoretical or computational demonstration that neuronal activity and connectivity are indeed sufficient to infer the function of a BNN. Therefore, we pose the Neural Systems Identification and Prediction Challenge (nuSPIC). We provide the connectivity and activity of all neurons and invite participants (1) to infer the functions implemented (hard-wired) in spiking neural networks (SNNs) by stimulating and recording the activity of neurons and, (2) to implement predefined mathematical/biological functions using SNNs. The nuSPICs can be accessed via a web-interface to the NEST simulator and the user is not required to know any specific programming language. Furthermore, the nuSPICs can be used as a teaching tool. Finally, nuSPICs use the crowd-sourcing model to address scientific issues. With this computational approach we aim to identify which functions can be inferred by systematic recordings of neuronal activity and connectivity. In addition, nuSPICs will help the design and application of new experimental paradigms based on the structure of the SNN and the presumed function which is to be discovered."
