@@ -1,0 +1,25 @@
+{% if site.logo %}
+  <img src="{{site.logo | relative_url}}" alt="Logo" />
+{% endif %}
+
+<h5 class="my-2">
+  <a href="{{ "/" | absolute_url }}">
+    {{ site.title | default: site.github.repository_name }}
+  </a>
+</h5>
+
+<p>{{ site.description | default: site.github.project_tagline }}</p>
+
+<p class="view">
+  <a href="{{ site.github.owner_url }}">View My GitHub Profile</a>
+</p>
+
+<ul class="nav flex-column">
+  {% for nav in site.navs %}
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="{{ nav.link }}">
+      {{ nav.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
