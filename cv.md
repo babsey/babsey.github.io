@@ -5,7 +5,7 @@ permalink: /cv/
 
 Dr. rer. nat. Sebastian Spreizer
 
-Email: spreizer@web.de
+Email: spreizer [at] web.de
 
 
 ## Work experience
