@@ -49,95 +49,97 @@ Email: spreizer@web.de
 
 ## Skills
 
+Skill level: * beginner, ** intermediate, *** expert
+
 #### Programming language
 
-- Bash
-- Java
-- JavaScript
-- Julia
-- Latex
-- Matlab
-- Python
-- TypeScript
+- Bash **
+- Java *
+- JavaScript ***
+- Julia *
+- Latex **
+- Matlab *
+- Python ***
+- TypeScript ***
 
 #### Virtualization software
 
-- Apptainer
-- Docker
-- VirtualBox
-- VMware
+- Apptainer (former Singularity) **
+- Docker **
+- VirtualBox **
+- VMware **
 
 #### Server infrastructure
 
-- OpenShift
-- OpenStack
+- OpenShift **
+- OpenStack **
 
 #### Web development
 
-- Angular.js
-- Angular 2 or up
-- Bootstrap
-- D3.js
-- Jekyll
-- jQuery
-- Node.js
-- Plotly.js
-- Three.js
-- Vue.js
-- Vuetify
+- Angular.js **
+- Angular 2 (or up) **
+- Bootstrap **
+- D3.js ***
+- Jekyll *
+- jQuery **
+- Node.js **
+- Plotly.js ***
+- Three.js ***
+- Vue.js ***
+- Vuetify ***
 
 #### Markup language
 
-- Markdown (md)
-- Restructured text (rst)
+- Markdown (md) ***
+- Restructured text (rst) ***
 
 #### Python package
 
-- Django
-- Flask
-- HDF5
-- Matplotlib
-- NEST
-- Neuron
-- Numpy
-- Pandas
-- PyGame
-- Scipy
+- Django **
+- Flask ***
+- HDF5 *
+- Matplotlib ***
+- NEST ***
+- Neuron **
+- Numpy ***
+- Pandas **
+- PyGame **
+- Scipy ***
 
 #### Desktop/mobile development
 
-- Electron
-- Ionic
-- Qt5
+- Electron **
+- Ionic *
+- Qt5 *
 
 #### Database management system
 
-- CouchDB
-- MongoDB
-- MySQL
-- PostgreSQL
-- SQLite
+- CouchDB **
+- MongoDB *
+- MySQL **
+- PostgreSQL **
+- SQLite **
 
 #### Version control system
 
-- Git
-- SVN
+- Git ***
+- SVN **
 
 #### Video/Image editor
 
-- Blender
-- OBS (Open Broadcaster Software)
+- Blender **
+- OBS (Open Broadcaster Software) **
 
 #### Code editor
 
-- Atom
-- emacs
-- vim
+- Atom ***
+- emacs *
+- vim **
 
 #### Single Board Computer
 
-- Raspberry Pi
-- Arduino
+- Raspberry Pi **
+- Arduino **
 
 <!-- #### Video conferences
 
