@@ -27,7 +27,9 @@
     "16": {},
     "17": { "location": "im Römerweg 5<br />(Lechner)" },
     "18": { "location": "im Keltenring 87<br />(Familie Wolfgang)" },
-    "19": {},
+    "19": {
+      "location": "am unteren Rainhof 2<br />(Weller)"
+    },
     "20": { "location": "am Rainhof 3<br />(Pabst)" },
     "21": { "location": "am Rainhof 21<br />(Laule/Hacker)" },
     "22": { "location": "im Keltenring 72<br />(Familie Gallus)" }
