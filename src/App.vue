@@ -5,7 +5,7 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <header>
-    <img alt="Profile" class="logo" src="./assets/img/spreizer.png" width="125" height="125" />
+    <img alt="Profile picture" class="profile" src="./assets/img/spreizer.png" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
@@ -22,7 +22,7 @@ header {
   line-height: 1.5;
 }
 
-.logo {
+.profile {
   display: block;
   margin: 0 auto 2rem;
 }
@@ -34,7 +34,7 @@ header {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
+  .profile {
     margin: 0 2rem 0 0;
   }
 
