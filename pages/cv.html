@@ -1,0 +1,86 @@
+---
+title: Curriculum Vitae
+permalink: /cv
+layout: page
+---
+
+<!-- <div class="py-5">
+  <div class="main-timeline">
+    <div class="left">
+      <h4>Work experience</h4>
+    </div>
+    {% for w in site.data.work %}
+      <div class="timeline left">
+        <div class="card">
+          <div class="card-body p-4">
+            <h3>{{ w.time }}</h3>
+            <p class="mb-0">{{ w.title }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div> -->
+
+<div id="work" class="mb-4">
+  <h4>Work experience</h4>
+  {% for w in site.data.work %}
+    <div class="row my-1">
+      <div class="col-2 fw-bold">{{ w.time }}</div>
+      <div class="col">{{ w.title }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+<div id="education" class="my-4">
+  <h4>Education</h4>
+  {% for e in site.data.education %}
+    <div class="row my-1">
+      <div class="col-2 fw-bold">{{ e.time }}</div>
+      <div class="col">{{ e.title }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+<div id="skills" class="my-4">
+  <h4>Skills</h4>
+  {% for s in site.data.skills %}
+    <div class="fw-bold mt-2">{{ s.title }}</div>
+
+    <div class="row d-flex">
+      {% for item in s.items %}
+        <div class="card col-xl-2 col-md-3 col-sm-4 col-6 border-0">
+          <div class="card-body d-flex">
+            <img class="card-img m-auto px-3" src="/assets/img/icons/{{ item.icon }}" alt="{{ item.name }}"></img>
+          </div>
+          <div class="card-footer bg-transparent">
+            <a href="{{ item.link }}" target="_blank" class="stretched-link text-body text-decoration-none">{{ item.name }}</a>
+            <div data-toggle="tooltip" data-placement="top" title="{{ item.level }}">
+              {% if item.level == 'beginner' %}
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-light"></i>
+                <i class="bi bi-star-fill text-light"></i>
+              {% endif %}
+              {% if item.level == 'advanced' %}
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-light"></i>
+              {% endif %}
+              {% if item.level == 'expert' %}
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+<!-- <script>
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script> -->

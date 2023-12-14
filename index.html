@@ -1,21 +1,47 @@
 ---
-permalink: /
+#
+# By default, content added below the "---" mark will appear in the home page
+# between the top bar and the list of recent posts.
+# To change the home page layout, edit the _layouts/home.html file.
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#
 layout: home
 ---
 
-<div class="container">
+<div class="d-flex align-middle" style="height: calc(100vh - 125px - 92px - 60px); min-height: 500px" >
 
-  <h1>Hello!</h1>
+    <div class="card m-auto" style="width: 720px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img class="my-2 img-fluid rounded-start" src="{{ site.profile | relative_url }}" alt="Profile picture"></img>
+            </div>
 
-  <p>
-  This is my personal web page for the public. Please feel free to explore various subpages:
-  </p>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title">Dr. Sebastian Spreizer</h3>
 
-  <ul>
-    <li><a href="/about">About me</a></li>
-    <li><a href="/bookmarks">Bookmarks</a></li>
-    <li><a href="/cv">Curriculum Vitae</a></li>
-    <li><a href="/publications">Publications</a></li>
-  </ul>
+                    <p class="card-text">The journey is the destination.</p>
+
+                    <p>
+                        <i class="bi bi-person"></i>
+                        I am a passionate code writer ... <a href="/about">to about</a>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-file-person"></i>
+                        My Curriculum vitae is ... <a href="/cv">to cv</a>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-file-text"></i>
+                        My research was published ... <a href="/publications">to publications</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>

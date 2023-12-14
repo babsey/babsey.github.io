@@ -1,0 +1,26 @@
+---
+layout: base
+---
+<div class="page">
+
+  <div class="row">
+    <div class="col-lg-2">
+      {% include sidenav.html %}
+    </div>
+
+    <div class="col">
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" aria-current="page"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ page.title | escape }}</li>
+        </ol>
+      </nav>
+
+      <div class="container px-md-5">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+</div>
