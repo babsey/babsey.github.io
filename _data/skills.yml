@@ -1,0 +1,302 @@
+- title: Programming language
+  items:
+  - name: JavaScript
+    icon: javascript/javascript-original.svg
+    level: expert
+    link: https://en.wikipedia.org/wiki/javascript
+  - name: Python
+    icon: python/python-original.svg
+    level: expert
+    link: https://www.python.org
+  - name: TypeScript
+    icon: typescript/typescript-original.svg
+    level: expert
+    link: https://www.typescriptlang.org
+  - name: Bash
+    icon: bash/bash-original.svg
+    level: advanced
+    link: https://en.wikipedia.org/wiki/bash_(unix_shell)
+  - name: Latex
+    icon: latex/latex-original.svg
+    level: advanced
+    link: https://en.wikipedia.org/wiki/latex
+  - name: Java
+    icon: java/java-original.svg
+    level: beginner
+    link: https://www.java.com
+  - name: Julia
+    icon: julia/julia-original.svg
+    level: beginner
+    link: https://julialang.org
+  - name: Node.js
+    icon: nodejs/nodejs-original.svg
+    level: beginner
+    link: https://nodejs.org
+
+- title: Web development
+  items:
+  - name: Vue.js
+    icon: vuejs/vuejs-original.svg
+    level: expert
+    link: https://vuejs.org
+  - name: Vuetify
+    icon: vuetify/vuetify-original.svg
+    level: expert
+    link: https://vuetifyjs.com
+  - name: Angular.js
+    icon: angularjs/angularjs-original.svg
+    level: advanced
+    link: https://angularjs.org
+  - name: Angular 2+
+    icon: angular/angular-original.svg
+    level: advanced
+    link: https://angular.io
+  - name: Bootstrap
+    icon: bootstrap/bootstrap-original.svg
+    level: advanced
+    link: https://getbootstrap.com
+  - name: jQuery
+    icon: jquery/jquery-original.svg
+    level: advanced
+    link: https://jquery.com
+  - name: Jekyll
+    icon: jekyll/jekyll-original.png
+    level: beginner
+    link: https://jekyllrb.com
+
+
+- title: Data analysis
+  items:
+  - name: Numpy
+    icon: numpy/numpy-original.svg
+    level: advanced
+    link: https://numpy.org
+  - name: Pandas
+    icon: pandas/pandas-original.svg
+    level: advanced
+    link: https://pandas.pydata.org
+  - name: Scipy
+    icon: scipy/scipy-original.svg
+    level: advanced
+    link: https://scipy.org
+  - name: Matlab
+    icon: matlab/matlab-original.svg
+    level: beginner
+    link: https://www.mathworks.com/products/matlab.html
+
+- title: Data visualization
+  items:
+  - name: D3.js
+    icon: d3js/d3js-original.svg
+    level: advanced
+    link: https://d3js.org
+  - name: Plotly.js
+    icon: plotlyjs/plotlyjs-original.svg
+    level: advanced
+    link: https://plotly.com/javascript
+  - name: Matplotlib
+    icon: matplotlib/matplotlib-original.svg
+    level: advanced
+    link: https://matplotlib.org
+  - name: Three.js
+    icon: threejs/threejs-original.svg
+    level: advanced
+    link: https://threejs.org
+
+- title: Virtualization software
+  items:
+    - name: Apptainer
+      icon: apptainer/apptainer-original.png
+      level: advanced
+      link: https://apptainer.org
+    - name: Docker
+      icon: docker/docker-original.svg
+      level: advanced
+      link: https://www.docker.com
+    - name: VirtualBox
+      icon: virtualbox/virtualbox-original.png
+      level: advanced
+      link: https://www.virtualbox.org
+    - name: VMware
+      icon: vmware/vmware-original.svg
+      level: advanced
+      link: https://www.vmware.com
+    - name: Vagrant
+      icon: vagrant/vagrant-original.svg
+      level: beginner
+      link: https://www.vagrantup.com
+
+- title: Server infrastructure
+  items:
+  - name: Flask
+    icon: flask/flask-original.svg
+    level: advanced
+    link: https://flask.palletsprojects.com
+  - name: Apache
+    icon: apache/apache-original.svg
+    level: advanced
+    link: https://httpd.apache.org
+  - name: Django
+    icon: django/django-plain.svg
+    level: advanced
+    link: https://www.djangoproject.com
+  - name: OpenShift
+    icon: openshift/openshift-original.svg
+    level: advanced
+    link: https://www.redhat.com/de/technologies/cloud-computing/openshift
+  - name: OpenStack
+    icon: openstack/openstack-original.svg
+    level: advanced
+    link: https://www.openstack.org
+  - name: uwsgi
+    icon: uwsgi/uwsgi-original.svg
+    level: beginner
+    link: https://en.wikipedia.org/wiki/uwsgi
+  - name: nginx
+    icon: nginx/nginx-original.svg
+    level: advanced
+    link: https://www.nginx.com
+  - name: Rancher
+    icon: rancher/rancher-original.svg
+    level: advanced
+    link: https://www.rancher.com
+
+- title: Markup/Markdown language
+  items:
+  - name: HTML5
+    icon: html5/html5-original.svg
+    level: advanced
+    link: https://en.wikipedia.org/wiki/html5
+  - name: Markdown
+    icon: markdown/markdown-original.svg
+    level: advanced
+    link: https://en.wikipedia.org/wiki/Markdown
+  - name: RestructuredText
+    icon: restructuredtext/restructuredtext-original.svg
+    level: advanced
+    link: https://en.wikipedia.org/wiki/restructuredtext
+
+- title: Development environment
+  items:
+    - name: Anaconda
+      icon: anaconda/anaconda-original.svg
+      level: advanced
+      link: https://www.anaconda.com
+    - name: GitHub
+      icon: github/github-original.svg
+      level: advanced
+      link: https://github.com
+    - name: Linux
+      icon: linux/linux-original.svg
+      level: advanced
+      link: https://en.wikipedia.org/wiki/linux
+    - name: Ubuntu
+      icon: ubuntu/ubuntu-plain.svg
+      level: advanced
+      link: https://ubuntu.com
+    - name: vim
+      icon: vim/vim-original.svg
+      level: advanced
+      link: https://www.vim.org
+    - name: VS Code
+      icon: vscode/vscode-original.svg
+      level: advanced
+      link: https://code.visualstudio.com
+    - name: Yarn
+      icon: yarn/yarn-original.svg
+      level: advanced
+      link: https://yarnpkg.com
+
+- title: Desktop/mobile development
+  items:
+  - name: Electron
+    icon: electron/electron-original.svg
+    level: advanced
+    link: https://www.electronjs.org
+  - name: Ionic
+    icon: ionic/ionic-original.svg
+    level: beginner
+    link: https://ionicframework.com
+  - name: Qt
+    icon: qt/qt-original.svg
+    level: beginner
+    link: https://www.qt.io
+
+- title: Database management system
+  items:
+  - name: CouchDB
+    icon: couchdb/couchdb-original.svg
+    level: advanced
+    link: https://couchdb.apache.org
+  - name: SQLite
+    icon: sqlite/sqlite-original.svg
+    level: advanced
+    link: https://www.sqlite.org
+  - name: Firebase
+    icon: firebase/firebase-plain.svg
+    level: beginner
+    link: https://couchdb.apache.org
+  - name: MongoDB
+    icon: mongodb/mongodb-original.svg
+    level: beginner
+    link: https://www.mongodb.com
+  - name: MySQL
+    icon: mysql/mysql-original.svg
+    level: beginner
+    link: https://www.mysql.com
+  - name: PostgreSQL
+    icon: postgresql/postgresql-original.svg
+    level: beginner
+    link: https://www.postgresql.org
+
+- title: Version control system
+  items:
+  - name: Git
+    icon: git/git-original.svg
+    level: advanced
+    link: https://git-scm.com
+  - name: Subversion
+    icon: subversion/subversion-original.svg
+    level: beginner
+    link: https://subversion.apache.org
+
+- title: Image/Video editing
+  items:
+  - name: Blender
+    icon: blender/blender-original.svg
+    level: advanced
+    link: https://www.blender.org
+  - name: GIMP
+    icon: gimp/gimp-original.svg
+    level: advanced
+    link: https://www.gimp.org
+  - name: Inkscape
+    icon: inkscape/inkscape-original.svg
+    level: advanced
+    link: https://inkscape.org
+  - name: OBS Studio
+    icon: obs/obs-original.svg
+    level: advanced
+    link: https://obsproject.com
+
+- title: Single Board Computer
+  items:
+  - name: Raspberry Pi
+    icon: raspberrypi/raspberrypi-original.svg
+    level: advanced
+    link: https://www.raspberrypi.com
+  - name: Arduino
+    icon: arduino/arduino-original.svg
+    level: beginner
+    link: https://www.arduino.cc
+
+- title: Simulation tools
+  items:
+    - name: NEST
+      icon: nest/nest-original.svg
+      level: advanced
+      link: https://www.nest-simulator.org
+    - name: Neuron
+      icon: neuron/neuron.png
+      level: beginner
+      link: https://www.neuron.yale.edu/neuron

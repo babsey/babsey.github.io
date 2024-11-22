@@ -1,0 +1,81 @@
+---
+title: Publications
+permalink: /publications
+layout: single
+---
+
+<div class="container mt-2">
+
+  <div class="input-group mb-2">
+    <span class="input-group-text" id="searchPublicationsIcon">Search</span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search publications"
+      id="searchPublications"
+      aria-label="searchPublications"
+      aria-describedby="searchPublicationsIcon"
+    />
+  </div>
+
+  <div id="publications">
+    {% for p in site.data.publications %}
+    <div id="{{ p.year }}" class="card mb-2" style="padding-bottom: 24px">
+      <div class="row g-0">
+        <div class="col-md-4 pt-4 ps-2">
+          <a data-bs-toggle="collapse" href="#{{ p.id }}" role="button">
+            <img
+              src="/assets/img/{{ p.image }}"
+              class="img-fluid rounded-start"
+            />
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div data-bs-toggle="collapse" href="#{{ p.id }}" role="button">
+              <h5 class="card-title">
+                <a>{{ p.title }}</a>
+              </h5>
+              <h6 class="card-subtitle pb-2">
+                <div class="fw-semibold">{{ p.authors }}</div>
+                <div>
+                  {{ p.journal }} ({{ p.year }}) {{ p.volume }}({{ p.issue
+                  }}):{{ p.pages }}
+                </div>
+              </h6>
+            </div>
+
+            DOI:
+            <a href="https://doi.org/{{ p.DOI }}" target="_blank">
+              {{ p.DOI }}
+            </a>
+          </div>
+        </div>
+
+        <p
+          class="p-2 card-text collapse"
+          id="{{ p.id }}"
+          style="text-align: justify;"
+          data-bs-toggle="collapse"
+          href="#{{ p.id }}"
+          role="button"
+        >
+          {{ p.abstract }}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- For searching purpose -->
+<script>
+  $(document).ready(function () {
+    $("#searchPublications").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#publications .card").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
+  });
+</script>
