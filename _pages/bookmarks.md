@@ -1,5 +1,5 @@
 ---
-title: Bookmarks
+title: "Bookmarks"
 permalink: /bookmarks
 ---
 
