@@ -1,6 +1,6 @@
 ---
-permalink: /about
 title: "About"
+baseurl: /about
 excerpt: "About my background"
 author_profile: true
 # toc: true
