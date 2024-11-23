@@ -120,7 +120,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:spreizer@web.de"
+      # url: "mailto:spreizer@web.de"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://babsey.github.io"
