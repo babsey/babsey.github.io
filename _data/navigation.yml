@@ -1,10 +1,11 @@
 # main links
 main:
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "About"
-    url: /about/
-  - title: "CV"
-    url: /cv/
-  - title: "Publications"
-    url: /publications/
+  - image_path: /assets/img/unsplash/ux-indonesia-0lwrK7v3jNk-unsplash.jpg
+    title: "About"
+    url: "/about/"
+  - image_path: /assets/img/unsplash/ben-rosett-WdJkXFQ4VHY-unsplash.jpg
+    title: "CV"
+    url: "/cv/"
+  - image_path: /assets/img/unsplash/annie-spratt-5cFwQ-WMcJU-unsplash.jpg
+    title: "Publications"
+    url: "/publications/"
