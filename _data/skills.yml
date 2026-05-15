@@ -1,9 +1,5 @@
 - title: Programming language
   items:
-    - title: JavaScript
-      image_path: javascript/javascript-original.svg
-      level: expert
-      url: https://en.wikipedia.org/wiki/javascript
     - title: Python
       image_path: python/python-original.svg
       level: expert
@@ -16,6 +12,14 @@
       image_path: bash/bash-original.svg
       level: advanced
       url: https://en.wikipedia.org/wiki/bash_(unix_shell)
+    - title: JavaScript
+      image_path: javascript/javascript-original.svg
+      level: expert
+      url: https://en.wikipedia.org/wiki/javascript
+    - title: Node.js
+      image_path: nodejs/nodejs-original.svg
+      level: beginner
+      url: https://nodejs.org
     - title: Latex
       image_path: latex/latex-original.svg
       level: advanced
@@ -28,10 +32,6 @@
       image_path: julia/julia-original.svg
       level: beginner
       url: https://julialang.org
-    - title: Node.js
-      image_path: nodejs/nodejs-original.svg
-      level: beginner
-      url: https://nodejs.org
 
 - title: Web development
   items:
@@ -43,26 +43,26 @@
       image_path: vuetify/vuetify-original.svg
       level: expert
       url: https://vuetifyjs.com
-    - title: Angular.js
-      image_path: angularjs/angularjs-original.svg
-      level: advanced
-      url: https://angularjs.org
-    - title: Angular 2+
-      image_path: angular/angular-original.svg
-      level: advanced
-      url: https://angular.io
     - title: Bootstrap
       image_path: bootstrap/bootstrap-original.svg
       level: advanced
       url: https://getbootstrap.com
-    - title: jQuery
-      image_path: jquery/jquery-original.svg
-      level: advanced
-      url: https://jquery.com
     - title: Jekyll
       image_path: jekyll/jekyll-original.png
       level: beginner
       url: https://jekyllrb.com
+    - title: Angular 2+
+      image_path: angular/angular-original.svg
+      level: advanced
+      url: https://angular.io
+    - title: Angular.js
+      image_path: angularjs/angularjs-original.svg
+      level: advanced
+      url: https://angularjs.org
+    - title: jQuery
+      image_path: jquery/jquery-original.svg
+      level: advanced
+      url: https://jquery.com
 
 - title: Data analysis
   items:
@@ -104,14 +104,14 @@
 
 - title: Virtualization software
   items:
-    - title: Apptainer
-      image_path: apptainer/apptainer-original.png
-      level: advanced
-      url: https://apptainer.org
     - title: Docker
       image_path: docker/docker-original.svg
       level: advanced
       url: https://www.docker.com
+    - title: Apptainer
+      image_path: apptainer/apptainer-original.png
+      level: advanced
+      url: https://apptainer.org
     - title: VirtualBox
       image_path: virtualbox/virtualbox-original.png
       level: advanced
@@ -125,8 +125,12 @@
       level: beginner
       url: https://www.vagrantup.com
 
-- title: Server infrastructure
+- title: Server architecture
   items:
+    - title: fastAPI
+      image_path: fastapi/fastapi-original.svg
+      level: advanced
+      url: https://fastapi.tiangolo.com
     - title: Flask
       image_path: flask/flask-original.svg
       level: advanced
@@ -135,10 +139,25 @@
       image_path: apache/apache-original.svg
       level: advanced
       url: https://httpd.apache.org
+    - title: nginx
+      image_path: nginx/nginx-original.svg
+      level: advanced
+      url: https://www.nginx.com
+    - title: uwsgi
+      image_path: uwsgi/uwsgi-original.svg
+      level: beginner
+      url: https://en.wikipedia.org/wiki/uwsgi
     - title: Django
       image_path: django/django-plain.svg
       level: advanced
       url: https://www.djangoproject.com
+
+- title: Server infrastructure
+  items:
+    - title: Rancher
+      image_path: rancher/rancher-original.svg
+      level: advanced
+      url: https://www.rancher.com
     - title: OpenShift
       image_path: openshift/openshift-original.svg
       level: advanced
@@ -147,18 +166,6 @@
       image_path: openstack/openstack-original.svg
       level: advanced
       url: https://www.openstack.org
-    - title: uwsgi
-      image_path: uwsgi/uwsgi-original.svg
-      level: beginner
-      url: https://en.wikipedia.org/wiki/uwsgi
-    - title: nginx
-      image_path: nginx/nginx-original.svg
-      level: advanced
-      url: https://www.nginx.com
-    - title: Rancher
-      image_path: rancher/rancher-original.svg
-      level: advanced
-      url: https://www.rancher.com
 
 - title: Markup/Markdown language
   items:
@@ -177,14 +184,14 @@
 
 - title: Development environment
   items:
-    - title: Anaconda
-      image_path: anaconda/anaconda-original.svg
-      level: advanced
-      url: https://www.anaconda.com
     - title: GitHub
       image_path: github/github-original.svg
       level: advanced
       url: https://github.com
+    - title: GitLab
+      image_path: gitlab/gitlab-original.svg
+      level: advanced
+      url: https://gitlab.com
     - title: Linux
       image_path: linux/linux-original.svg
       level: advanced
@@ -197,10 +204,14 @@
       image_path: vim/vim-original.svg
       level: advanced
       url: https://www.vim.org
-    - title: VS Code
-      image_path: vscode/vscode-original.svg
+    - title: Anaconda
+      image_path: anaconda/anaconda-original.svg
       level: advanced
-      url: https://code.visualstudio.com
+      url: https://www.anaconda.com
+    # - title: VS Code
+    #   image_path: vscode/vscode-original.svg
+    #   level: advanced
+    #   url: https://code.visualstudio.com
     - title: Yarn
       image_path: yarn/yarn-original.svg
       level: advanced

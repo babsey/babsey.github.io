@@ -1,0 +1,1 @@
+Most icons are taken from https://icon-sets.iconify.design/devicon

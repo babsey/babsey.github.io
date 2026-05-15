@@ -1,12 +1,243 @@
 ---
-layout: splash
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.3"
-  overlay_image: /assets/img/header.jpg
-excerpt: "The journey is the destination."
+layout: null
 ---
 
-<br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }} &mdash; {{ site.description }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
 
-{% include feature_nav %}
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">{{ site.name }}</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <img src="/assets/img/profile.png" alt="{{ site.name }}" class="hero-avatar">
+      <h1>{{ site.name }}</h1>
+      <p class="tagline">
+        <i class="fa-solid fa-quote-left"></i>
+        &nbsp;The journey is the destination.
+      </p>
+      <!-- <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Explore</a>
+      </div> -->
+      <div class="hero-scroll"><a href="#about"><i class="fa-solid fa-chevron-down"></i></a></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <span class="section-label">About</span>
+      <h2 class="section-title">Background</h2>
+      <p class="section-desc">Computational neuroscientist and open-source software developer.</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I am a passionate code writer for open source software, specializing in the development of web applications for computational neuroscience.</p>
+          <p>Currently, I am lead developer of <strong>NEST Desktop</strong>, an educational web application for the NEST Simulation Tool. I also enjoy analyzing and visualizing data from numerical simulations of brain activity.</p>
+          <p>In 2021 I finished my PhD in computational neuroscience at the University of Freiburg, where I studied how network connectivity and dynamics shape information transfer in neural networks.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <i class="fa-solid fa-code"></i>
+            <h4>Open Source Development</h4>
+            <p>Lead developer of NEST Desktop &mdash; an educational GUI for neuronal network simulation.</p>
+          </div>
+          <div class="about-highlight">
+            <i class="fa-solid fa-brain"></i>
+            <h4>Computational Neuroscience</h4>
+            <p>PhD in neurobiology researching spiking neural network dynamics and information transfer.</p>
+          </div>
+          <div class="about-highlight">
+            <i class="fa-solid fa-chart-line"></i>
+            <h4>Data Analysis &amp; Visualization</h4>
+            <p>Experienced in analyzing and visualizing neural simulation data using Python and modern web tools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+      <p class="section-desc">Technologies and tools I work with, organized by domain.</p>
+      <div class="skills-grid">
+        {% for category in site.data.skills %}
+        <div class="skill-category fade-up">
+          <h3>{{ category.title }}</h3>
+          <div class="skill-items">
+            {% for skill in category.items %}
+            <a href="{{ skill.url }}" target="_blank" rel="noopener" class="skill-badge" title="{{ skill.title }} - {{ skill.level }}">
+              {% if skill.image_path %}
+              <img src="/assets/img/icons/{{ skill.image_path }}" alt="{{ skill.title }}" loading="lazy">
+              {% endif %}
+              {{ skill.title }}
+              <span class="skill-level">
+                {% assign lvl = skill.level %}
+                {% if lvl == 'beginner' %}
+                  <span class="dot active"></span><span class="dot inactive"></span><span class="dot inactive"></span>
+                {% elsif lvl == 'advanced' %}
+                  <span class="dot active"></span><span class="dot active"></span><span class="dot inactive"></span>
+                {% elsif lvl == 'expert' %}
+                  <span class="dot active"></span><span class="dot active"></span><span class="dot active"></span>
+                {% endif %}
+              </span>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="container">
+      <span class="section-label">Experience</span>
+      <h2 class="section-title">Work</h2>
+      <p class="section-desc">Professional experience in software development and research.</p>
+      <div class="timeline">
+        {% for w in site.data.work %}
+        <div class="timeline-item fade-up">
+          <div class="time">{{ w.time }}</div>
+          <div class="desc">{{ w.title }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <span class="section-label">Academics</span>
+      <h2 class="section-title">Education</h2>
+      <p class="section-desc">Academic background in biology and computational neuroscience.</p>
+      <div class="timeline">
+        {% for e in site.data.education %}
+        <div class="timeline-item fade-up">
+          <div class="time">{{ e.time }}</div>
+          <div class="desc">{{ e.title }}</div>
+          {% if e.location %}<div class="loc">{{ e.location }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="container">
+      <span class="section-label">Research</span>
+      <h2 class="section-title">Publications</h2>
+      <p class="section-desc">Peer-reviewed articles in computational neuroscience.</p>
+      <div class="pub-list">
+        {% for p in site.data.publications reversed %}
+        <div class="pub-card fade-up" onclick="this.classList.toggle('expanded')">
+          <span class="expand-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          <span class="pub-year">{{ p.year }}</span>
+          <h3>{{ p.title }}</h3>
+          <div class="pub-authors">{{ p.authors }}</div>
+          <div class="pub-journal">{{ p.journal }} ({{ p.year }}) {{ p.volume }}({{ p.issue }}):{{ p.pages }}</div>
+          <div class="pub-doi">DOI: <a href="https://doi.org/{{ p.DOI }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ p.DOI }}</a></div>
+          <div class="pub-abstract">
+            <!-- <div style="margin-bottom: 20px; height:300px; overflow-y: hidden;"><img src="assets/img/publications/{{ p.image }}" width="900px"/></div> -->
+            <p>{{ p.abstract }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        {% for link in site.author.links %}
+          {% if link.url %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.label }}">
+            <i class="{{ link.icon }}"></i>
+          </a>
+          {% endif %}
+        {% endfor %}
+        <a href="mailto:{{ site.author.email }}" title="Email">
+          <i class="fas fa-fw fa-envelope"></i>
+        </a>
+      </div>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
+      <p>The personal page was modernized with AI (100k tokens).</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const icon = toggle.querySelector('i');
+    const stored = localStorage.getItem('theme');
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      icon.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+
+    if (stored) {
+      setTheme(stored);
+    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      setTheme('light');
+    }
+
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'light' ? 'dark' : 'light');
+    });
+
+    // Scroll-triggered fade-up animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Close expanded publications when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.pub-card')) {
+        document.querySelectorAll('.pub-card.expanded').forEach(c => c.classList.remove('expanded'));
+      }
+    });
+  </script>
+</body>
+</html>
