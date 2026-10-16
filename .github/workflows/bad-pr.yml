@@ -9,6 +9,7 @@ permissions:
 
 jobs:
   close-pr:
+    if: github.repository == 'mmistakes/minimal-mistakes'
     permissions:
       pull-requests: write
     runs-on: ubuntu-latest

@@ -5,5 +5,74 @@ search: false
 
 @charset "utf-8";
 
+// Modern system font stack (no web font download)
+$sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$border-radius: 8px;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+html {
+  scroll-behavior: smooth;
+}
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(8px);
+
+  .greedy-nav,
+  .greedy-nav .visible-links {
+    background: transparent;
+  }
+}
+
+.page__hero--overlay {
+  background-image: linear-gradient(135deg, #0b3d5c 0%, #0092ca 100%);
+
+  .page__title {
+    font-size: 2.5em;
+    letter-spacing: -0.02em;
+  }
+}
+
+.btn {
+  border-radius: $border-radius;
+}
+
+.feature__item .archive__item {
+  height: 100%;
+  padding: 1.5em;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.author__avatar img {
+  border-radius: 50%;
+}
+
+.home-recent {
+  margin-top: 1em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .feature__item .archive__item {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

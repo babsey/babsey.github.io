@@ -1,4 +1,38 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+title: "Sebastian Spreizer"
+excerpt: "Computational neuroscience, spiking neural networks and web-based tools that make simulation accessible."
+header:
+  overlay_color: "#0b3d5c"
+  actions:
+    - label: "Explore projects"
+      url: "/projects/"
+    - label: "GitHub"
+      url: "https://github.com/babsey"
+feature_row:
+  - title: "NEST Desktop"
+    excerpt: "A web-based GUI for the NEST Simulator: build, run and explore spiking neural network models in the browser, without writing code."
+    url: "https://github.com/nest-desktop/nest-desktop"
+    btn_label: "View on GitHub"
+    btn_class: "btn--primary"
+  - title: "Spatio-temporal activity sequences"
+    excerpt: "Simulation code for spatio-temporal activity sequences in spiking neuronal networks."
+    url: "https://github.com/babsey/spatio-temporal-activity-sequence"
+    btn_label: "View code"
+    btn_class: "btn--primary"
+  - title: "Code Graph"
+    excerpt: "A modular, node-based code generator written in TypeScript."
+    url: "https://github.com/babsey/code-graph"
+    btn_label: "View code"
+    btn_class: "btn--primary"
 ---
+
+{% include feature_row %}
+
+<section class="home-recent">
+  <h2 class="archive__subtitle">Recent posts</h2>
+  {% for post in site.posts limit: 3 %}
+    {% include archive-single.html type="list" %}
+  {% endfor %}
+  <p><a href="{{ '/posts/' | relative_url }}" class="btn btn--inverse">All posts</a></p>
+</section>
