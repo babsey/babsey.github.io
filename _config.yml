@@ -104,6 +104,7 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://github.com/babsey"
+    - "https://www.linkedin.com/in/sebastian-spreizer-5055032a8"
 
 # Analytics
 analytics:
@@ -119,9 +120,12 @@ author:
   avatar           : "https://avatars.githubusercontent.com/u/620984?v=4"
   bio              : "Full-stack developer & DevOps engineer. Lead developer of NEST Desktop. Open to new roles in Freiburg."
   location         : "Freiburg, Germany"
-  email            : "spreizer@web.de"
+  email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/sebastian-spreizer-5055032a8"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/babsey"
@@ -132,6 +136,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/sebastian-spreizer-5055032a8"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/babsey"

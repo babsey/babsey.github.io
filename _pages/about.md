@@ -8,7 +8,7 @@ I have been building, shipping and running web applications since 2009, mostly f
 users who need powerful tools that are still easy to use.
 
 **I'm currently looking for new roles in full-stack development, DevOps and agentic coding**, in
-Freiburg or remote. [Email me](mailto:spreizer@web.de) or take a look at my [CV]({{ "/cv/" | relative_url }}).
+Freiburg or remote. [Connect with me on LinkedIn](https://www.linkedin.com/in/sebastian-spreizer-5055032a8) or take a look at my [CV]({{ "/cv/" | relative_url }}).
 
 ## What I do
 
@@ -36,5 +36,5 @@ collaboration with scientists, as well as with production code.
 
 ## Elsewhere
 
-- Email: [spreizer@web.de](mailto:spreizer@web.de)
+- LinkedIn: [sebastian-spreizer-5055032a8](https://www.linkedin.com/in/sebastian-spreizer-5055032a8)
 - GitHub: [@babsey](https://github.com/babsey)
