@@ -16,7 +16,13 @@ toc_sticky: true
   <li class="cv-timeline__item">
     <span class="cv-timeline__time">{{ w.time }}</span>
     <div class="cv-timeline__body">
+      {% assign parts = w.title | split: " - " %}
+      {% if parts.size > 1 %}
+      <strong>{{ parts[0] }}</strong>
+      <span class="cv-timeline__place">{{ w.title | remove_first: parts[0] | remove_first: " - " }}</span>
+      {% else %}
       <strong>{{ w.title }}</strong>
+      {% endif %}
       {% if w.location %}<span class="cv-timeline__place">{{ w.location }}</span>{% endif %}
     </div>
   </li>
@@ -29,7 +35,9 @@ toc_sticky: true
   <li class="cv-timeline__item">
     <span class="cv-timeline__time">{{ e.time }}</span>
     <div class="cv-timeline__body">
-      <strong>{{ e.title }}</strong>
+      {% assign parts = e.title | split: " - " %}
+      <strong>{{ parts[0] }}</strong>
+      {% if parts.size > 1 %}<span class="cv-timeline__place">{{ e.title | remove_first: parts[0] | remove_first: " - " }}</span>{% endif %}
       {% if e.location %}<span class="cv-timeline__place">{{ e.location }}</span>{% endif %}
     </div>
   </li>
@@ -38,7 +46,8 @@ toc_sticky: true
 
 <h2 id="publications">Publications</h2>
 <ol class="cv-pubs">
-  {% for p in site.data.publications %}
+  {% assign publications = site.data.publications | sort: "year" | reverse %}
+  {% for p in publications %}
   <li class="cv-pub" id="{{ p.id }}">
     {% if p.image %}
     <img class="cv-pub__image" src="{{ '/assets/images/publications/' | append: p.image | relative_url }}" alt="" loading="lazy">
@@ -72,7 +81,7 @@ toc_sticky: true
       {% for item in s.items %}
       <li class="cv-skill cv-skill--{{ item.level }}" title="{{ item.level }}">
         <span class="cv-level cv-level--{{ item.level }}" aria-hidden="true"></span>
-        <a href="{{ item.link }}">{{ item.name }}</a>
+        <a href="{{ item.url | default: item.link }}">{{ item.title | default: item.name }}</a>
         <span class="screen-reader-text">({{ item.level }})</span>
       </li>
       {% endfor %}

@@ -107,7 +107,8 @@ html {
   }
 
   .cv-timeline__time {
-    flex: 0 0 7.5em;
+    flex: 0 0 8.5em;
+    white-space: nowrap;
     font-family: $monospace;
     font-size: $type-size-6;
     line-height: 2.2;
