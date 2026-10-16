@@ -16,7 +16,9 @@ Then open <http://localhost:4000>.
 ## Content
 
 - `index.html` – home page (hero + featured projects)
-- `_pages/` – About, CV, Projects, 404
+- `_pages/` – About, CV (English `/cv/`, German `/de/cv/`), Projects, 404
+- `_includes/cv.html` – CV template shared by both languages; labels in `_data/cv_i18n.yml`,
+  German titles in the `title_de` / `location_de` fields of `_data/work.yml` and `_data/education.yml`
 - `_data/` – CV data (`work.yml`, `education.yml`, `publications.yml`, `skills.yml`)
 - `_data/navigation.yml` – top navigation
 - `assets/css/main.scss` – skin selection and style overrides

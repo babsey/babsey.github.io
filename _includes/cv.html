@@ -1,0 +1,100 @@
+{% assign t = site.data.cv_i18n[include.lang] %}
+{% assign lang = include.lang %}
+
+<p class="cv__actions">
+  <a href="#" class="btn btn--inverse" onclick="window.print(); return false;"><i class="fas fa-print" aria-hidden="true"></i> {{ t.print }}</a>
+  <a href="{{ t.switch_url | relative_url }}" class="btn btn--inverse" hreflang="{% if lang == 'de' %}en{% else %}de{% endif %}"><i class="fas fa-language" aria-hidden="true"></i> {{ t.switch_label }}</a>
+</p>
+
+<h2 id="profile">{{ t.profile }}</h2>
+<p class="cv-profile">{{ t.profile_text }}</p>
+<p class="cv-profile__meta">
+  <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ t.location }}</span>
+  <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:spreizer@web.de">spreizer@web.de</a></span>
+  <span><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/babsey">github.com/babsey</a></span>
+</p>
+<p class="cv-profile__looking"><strong>{{ t.looking_label }}</strong> {{ t.looking_text }}</p>
+
+<h2 id="work">{{ t.work }}</h2>
+<ol class="cv-timeline">
+  {% for w in site.data.work %}
+  <li class="cv-timeline__item">
+    <span class="cv-timeline__time">{{ w.time | replace: "current", t.current }}</span>
+    <div class="cv-timeline__body">
+      {% if lang == "de" and w.title_de %}{% assign title = w.title_de %}{% else %}{% assign title = w.title %}{% endif %}
+      {% assign parts = title | split: " - " %}
+      <strong>{{ parts[0] }}</strong>
+      {% if parts.size > 1 %}<span class="cv-timeline__place">{{ title | remove_first: parts[0] | remove_first: " - " }}</span>{% endif %}
+      {% if w.location %}<span class="cv-timeline__place">{{ w.location }}</span>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 id="skills">{{ t.skills }}</h2>
+<p class="cv-skills__legend">
+  <span class="cv-level cv-level--expert" aria-hidden="true"></span> {{ t.levels.expert }}
+  <span class="cv-level cv-level--advanced" aria-hidden="true"></span> {{ t.levels.advanced }}
+  <span class="cv-level cv-level--beginner" aria-hidden="true"></span> {{ t.levels.beginner }}
+</p>
+<div class="cv-skills">
+  {% assign skill_order = "Programming language|Web development|Server architecture|Server infrastructure|Virtualization software|Development environment|Database management system|Version control system|Data visualization|Data analysis|Desktop/mobile development" | split: "|" %}
+  {% assign skill_groups = "" | split: "" %}
+  {% for t in skill_order %}{% assign g = site.data.skills | where: "title", t %}{% assign skill_groups = skill_groups | concat: g %}{% endfor %}
+  {% for s in site.data.skills %}{% unless skill_order contains s.title %}{% assign skill_groups = skill_groups | push: s %}{% endunless %}{% endfor %}
+  {% for s in skill_groups %}
+  <section class="cv-skills__group">
+    <h3>{{ t.skill_groups[s.title] | default: s.title }}</h3>
+    <ul class="cv-skills__list">
+      {% for item in s.items %}
+      {% assign level = t.levels[item.level] | default: item.level %}
+      <li class="cv-skill cv-skill--{{ item.level }}" title="{{ level }}">
+        <span class="cv-level cv-level--{{ item.level }}" aria-hidden="true"></span>
+        <a href="{{ item.url | default: item.link }}">{{ item.title | default: item.name }}</a>
+        <span class="screen-reader-text">({{ level }})</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+
+<h2 id="education">{{ t.education }}</h2>
+<ol class="cv-timeline">
+  {% for e in site.data.education %}
+  <li class="cv-timeline__item">
+    <span class="cv-timeline__time">{{ e.time }}</span>
+    <div class="cv-timeline__body">
+      {% if lang == "de" and e.title_de %}{% assign title = e.title_de %}{% else %}{% assign title = e.title %}{% endif %}
+      {% if lang == "de" and e.location_de %}{% assign place = e.location_de %}{% else %}{% assign place = e.location %}{% endif %}
+      {% assign parts = title | split: " - " %}
+      <strong>{{ parts[0] }}</strong>
+      {% if parts.size > 1 %}<span class="cv-timeline__place">{{ title | remove_first: parts[0] | remove_first: " - " }}</span>{% endif %}
+      {% if place %}<span class="cv-timeline__place">{{ place }}</span>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 id="publications">{{ t.publications }}</h2>
+<ol class="cv-pubs">
+  {% assign publications = site.data.publications | sort: "year" | reverse %}
+  {% for p in publications %}
+  <li class="cv-pub" id="{{ p.id }}">
+    {% if p.image %}
+    <img class="cv-pub__image" src="{{ '/assets/images/publications/' | append: p.image | relative_url }}" alt="" loading="lazy">
+    {% endif %}
+    <div class="cv-pub__body">
+      <a class="cv-pub__title" href="https://doi.org/{{ p.DOI }}">{{ p.title }}</a>
+      <div class="cv-pub__authors">{{ p.authors | replace: "Sebastian Spreizer", "<strong>Sebastian Spreizer</strong>" | replace: "Spreizer S", "<strong>Spreizer S</strong>" }}</div>
+      <div class="cv-pub__venue"><em>{{ p.journal }}</em> ({{ p.year }}) {{ p.volume }}({{ p.issue }}):{{ p.pages }} · <a href="https://doi.org/{{ p.DOI }}">doi:{{ p.DOI }}</a></div>
+      {% if p.abstract %}
+      <details class="cv-pub__abstract">
+        <summary>{{ t.abstract }}</summary>
+        <p>{{ p.abstract }}</p>
+      </details>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>

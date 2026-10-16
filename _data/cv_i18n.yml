@@ -1,0 +1,65 @@
+# Labels for the CV page (_includes/cv.html), per language.
+en:
+  print: "Print / save as PDF"
+  switch_label: "Deutsche Version"
+  switch_url: /de/cv/
+  profile: "Profile"
+  profile_text: >-
+    Full-stack developer and DevOps engineer with experience since 2009 in building, shipping and
+    operating web applications. Lead developer of NEST Desktop (Vue, TypeScript, Python), with
+    containerised deployments on Rancher, OpenShift and OpenStack. Works with AI coding agents in
+    day-to-day development. PhD in computational neuroscience.
+  location: "Freiburg im Breisgau, Germany"
+  looking_label: "Looking for:"
+  looking_text: "full-stack, DevOps or agentic coding roles in Freiburg or remote."
+  work: "Work experience"
+  skills: "Skills"
+  education: "Education"
+  publications: "Publications"
+  abstract: "Abstract"
+  current: "current"
+  levels:
+    expert: "expert"
+    advanced: "advanced"
+    beginner: "beginner"
+  skill_groups: {}
+
+de:
+  print: "Drucken / als PDF speichern"
+  switch_label: "English version"
+  switch_url: /cv/
+  profile: "Profil"
+  profile_text: >-
+    Full-Stack-Entwickler und DevOps-Engineer mit Erfahrung seit 2009 in Entwicklung, Auslieferung
+    und Betrieb von Webanwendungen. Lead Developer von NEST Desktop (Vue, TypeScript, Python) mit
+    containerisierten Deployments auf Rancher, OpenShift und OpenStack. Setzt KI-Coding-Agenten im
+    Entwicklungsalltag ein. Promotion in Computational Neuroscience.
+  location: "Freiburg im Breisgau"
+  looking_label: "Gesucht:"
+  looking_text: "Stellen in Full-Stack-Entwicklung, DevOps oder Agentic Coding in Freiburg oder remote."
+  work: "Berufserfahrung"
+  skills: "Kenntnisse"
+  education: "Ausbildung"
+  publications: "Publikationen"
+  abstract: "Abstract (englisch)"
+  current: "heute"
+  levels:
+    expert: "Experte"
+    advanced: "fortgeschritten"
+    beginner: "Grundkenntnisse"
+  skill_groups:
+    "Programming language": "Programmiersprachen"
+    "Web development": "Webentwicklung"
+    "Server architecture": "Serverarchitektur"
+    "Server infrastructure": "Serverinfrastruktur"
+    "Virtualization software": "Virtualisierung & Container"
+    "Development environment": "Entwicklungsumgebung"
+    "Database management system": "Datenbanksysteme"
+    "Version control system": "Versionsverwaltung"
+    "Data visualization": "Datenvisualisierung"
+    "Data analysis": "Datenanalyse"
+    "Desktop/mobile development": "Desktop- & Mobile-Entwicklung"
+    "Markup/Markdown language": "Auszeichnungssprachen"
+    "Image/Video editing": "Bild- & Videobearbeitung"
+    "Single Board Computer": "Einplatinencomputer"
+    "Simulation tools": "Simulationswerkzeuge"
