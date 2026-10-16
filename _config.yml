@@ -104,7 +104,7 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://github.com/babsey"
-    - "https://www.linkedin.com/in/sebastian-spreizer-5055032a8"
+    - "https://www.linkedin.com/in/sebastian-spreizer"
 
 # Analytics
 analytics:
