@@ -1,0 +1,82 @@
+---
+permalink: /cv/
+title: "Curriculum Vitae"
+toc: true
+toc_label: "CV"
+toc_sticky: true
+---
+
+<p class="cv__actions">
+  <a href="#" class="btn btn--inverse" onclick="window.print(); return false;"><i class="fas fa-print" aria-hidden="true"></i> Print / save as PDF</a>
+</p>
+
+<h2 id="work">Work experience</h2>
+<ol class="cv-timeline">
+  {% for w in site.data.work %}
+  <li class="cv-timeline__item">
+    <span class="cv-timeline__time">{{ w.time }}</span>
+    <div class="cv-timeline__body">
+      <strong>{{ w.title }}</strong>
+      {% if w.location %}<span class="cv-timeline__place">{{ w.location }}</span>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 id="education">Education</h2>
+<ol class="cv-timeline">
+  {% for e in site.data.education %}
+  <li class="cv-timeline__item">
+    <span class="cv-timeline__time">{{ e.time }}</span>
+    <div class="cv-timeline__body">
+      <strong>{{ e.title }}</strong>
+      {% if e.location %}<span class="cv-timeline__place">{{ e.location }}</span>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 id="publications">Publications</h2>
+<ol class="cv-pubs">
+  {% for p in site.data.publications %}
+  <li class="cv-pub" id="{{ p.id }}">
+    {% if p.image %}
+    <img class="cv-pub__image" src="{{ '/assets/images/publications/' | append: p.image | relative_url }}" alt="" loading="lazy">
+    {% endif %}
+    <div class="cv-pub__body">
+      <a class="cv-pub__title" href="https://doi.org/{{ p.DOI }}">{{ p.title }}</a>
+      <div class="cv-pub__authors">{{ p.authors | replace: "Sebastian Spreizer", "<strong>Sebastian Spreizer</strong>" | replace: "Spreizer S", "<strong>Spreizer S</strong>" }}</div>
+      <div class="cv-pub__venue"><em>{{ p.journal }}</em> ({{ p.year }}) {{ p.volume }}({{ p.issue }}):{{ p.pages }} · <a href="https://doi.org/{{ p.DOI }}">doi:{{ p.DOI }}</a></div>
+      {% if p.abstract %}
+      <details class="cv-pub__abstract">
+        <summary>Abstract</summary>
+        <p>{{ p.abstract }}</p>
+      </details>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 id="skills">Skills</h2>
+<p class="cv-skills__legend">
+  <span class="cv-level cv-level--expert" aria-hidden="true"></span> expert
+  <span class="cv-level cv-level--advanced" aria-hidden="true"></span> advanced
+  <span class="cv-level cv-level--beginner" aria-hidden="true"></span> beginner
+</p>
+<div class="cv-skills">
+  {% for s in site.data.skills %}
+  <section class="cv-skills__group">
+    <h3>{{ s.title }}</h3>
+    <ul class="cv-skills__list">
+      {% for item in s.items %}
+      <li class="cv-skill cv-skill--{{ item.level }}" title="{{ item.level }}">
+        <span class="cv-level cv-level--{{ item.level }}" aria-hidden="true"></span>
+        <a href="{{ item.link }}">{{ item.name }}</a>
+        <span class="screen-reader-text">({{ item.level }})</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

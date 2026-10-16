@@ -1,0 +1,237 @@
+- title: Programming language
+  items:
+  - name: JavaScript
+    level: expert
+    link: https://en.wikipedia.org/wiki/javascript
+  - name: Python
+    level: expert
+    link: https://www.python.org
+  - name: TypeScript
+    level: expert
+    link: https://www.typescriptlang.org
+  - name: Bash
+    level: advanced
+    link: https://en.wikipedia.org/wiki/bash_(unix_shell)
+  - name: Latex
+    level: advanced
+    link: https://en.wikipedia.org/wiki/latex
+  - name: Java
+    level: beginner
+    link: https://www.java.com
+  - name: Julia
+    level: beginner
+    link: https://julialang.org
+  - name: Node.js
+    level: beginner
+    link: https://nodejs.org
+
+- title: Web development
+  items:
+  - name: Vue.js
+    level: expert
+    link: https://vuejs.org
+  - name: Vuetify
+    level: expert
+    link: https://vuetifyjs.com
+  - name: Angular.js
+    level: advanced
+    link: https://angularjs.org
+  - name: Angular 2+
+    level: advanced
+    link: https://angular.io
+  - name: Bootstrap
+    level: advanced
+    link: https://getbootstrap.com
+  - name: jQuery
+    level: advanced
+    link: https://jquery.com
+  - name: Jekyll
+    level: beginner
+    link: https://jekyllrb.com
+
+
+- title: Data analysis
+  items:
+  - name: Numpy
+    level: advanced
+    link: https://numpy.org
+  - name: Pandas
+    level: advanced
+    link: https://pandas.pydata.org
+  - name: Scipy
+    level: advanced
+    link: https://scipy.org
+  - name: Matlab
+    level: beginner
+    link: https://www.mathworks.com/products/matlab.html
+
+- title: Data visualization
+  items:
+  - name: D3.js
+    level: advanced
+    link: https://d3js.org
+  - name: Plotly.js
+    level: advanced
+    link: https://plotly.com/javascript
+  - name: Matplotlib
+    level: advanced
+    link: https://matplotlib.org
+  - name: Three.js
+    level: advanced
+    link: https://threejs.org
+
+- title: Virtualization software
+  items:
+    - name: Apptainer
+      level: advanced
+      link: https://apptainer.org
+    - name: Docker
+      level: advanced
+      link: https://www.docker.com
+    - name: VirtualBox
+      level: advanced
+      link: https://www.virtualbox.org
+    - name: VMware
+      level: advanced
+      link: https://www.vmware.com
+    - name: Vagrant
+      level: beginner
+      link: https://www.vagrantup.com
+
+- title: Server infrastructure
+  items:
+  - name: Flask
+    level: advanced
+    link: https://flask.palletsprojects.com
+  - name: Apache
+    level: advanced
+    link: https://httpd.apache.org
+  - name: Django
+    level: advanced
+    link: https://www.djangoproject.com
+  - name: OpenShift
+    level: advanced
+    link: https://www.redhat.com/de/technologies/cloud-computing/openshift
+  - name: OpenStack
+    level: advanced
+    link: https://www.openstack.org
+  - name: uwsgi
+    level: beginner
+    link: https://en.wikipedia.org/wiki/uwsgi
+  - name: nginx
+    level: advanced
+    link: https://www.nginx.com
+  - name: Rancher
+    level: advanced
+    link: https://www.rancher.com
+
+- title: Markup/Markdown language
+  items:
+  - name: HTML5
+    level: advanced
+    link: https://en.wikipedia.org/wiki/html5
+  - name: Markdown
+    level: advanced
+    link: https://en.wikipedia.org/wiki/Markdown
+  - name: RestructuredText
+    level: advanced
+    link: https://en.wikipedia.org/wiki/restructuredtext
+
+- title: Development environment
+  items:
+    - name: Anaconda
+      level: advanced
+      link: https://www.anaconda.com
+    - name: GitHub
+      level: advanced
+      link: https://github.com
+    - name: Linux
+      level: advanced
+      link: https://en.wikipedia.org/wiki/linux
+    - name: Ubuntu
+      level: advanced
+      link: https://ubuntu.com
+    - name: vim
+      level: advanced
+      link: https://www.vim.org
+    - name: VS Code
+      level: advanced
+      link: https://code.visualstudio.com
+    - name: Yarn
+      level: advanced
+      link: https://yarnpkg.com
+
+- title: Desktop/mobile development
+  items:
+  - name: Electron
+    level: advanced
+    link: https://www.electronjs.org
+  - name: Ionic
+    level: beginner
+    link: https://ionicframework.com
+  - name: Qt
+    level: beginner
+    link: https://www.qt.io
+
+- title: Database management system
+  items:
+  - name: CouchDB
+    level: advanced
+    link: https://couchdb.apache.org
+  - name: SQLite
+    level: advanced
+    link: https://www.sqlite.org
+  - name: Firebase
+    level: beginner
+    link: https://firebase.google.com
+  - name: MongoDB
+    level: beginner
+    link: https://www.mongodb.com
+  - name: MySQL
+    level: beginner
+    link: https://www.mysql.com
+  - name: PostgreSQL
+    level: beginner
+    link: https://www.postgresql.org
+
+- title: Version control system
+  items:
+  - name: Git
+    level: advanced
+    link: https://git-scm.com
+  - name: Subversion
+    level: beginner
+    link: https://subversion.apache.org
+
+- title: Image/Video editing
+  items:
+  - name: Blender
+    level: advanced
+    link: https://www.blender.org
+  - name: GIMP
+    level: advanced
+    link: https://www.gimp.org
+  - name: Inkscape
+    level: advanced
+    link: https://inkscape.org
+  - name: OBS Studio
+    level: advanced
+    link: https://obsproject.com
+
+- title: Single Board Computer
+  items:
+  - name: Raspberry Pi
+    level: advanced
+    link: https://www.raspberrypi.com
+  - name: Arduino
+    level: beginner
+    link: https://www.arduino.cc
+
+- title: Simulation tools
+  items:
+    - name: NEST
+      level: advanced
+      link: https://www.nest-simulator.org
+    - name: Neuron
+      level: beginner
+      link: https://www.neuron.yale.edu/neuron

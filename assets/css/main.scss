@@ -76,3 +76,196 @@ html {
     }
   }
 }
+
+/* CV page */
+
+.cv__actions {
+  margin-bottom: 0;
+}
+
+.cv-timeline {
+  margin: 0 0 1em;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid $border-color;
+
+  .cv-timeline__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em 1em;
+    margin: 0;
+    padding: 0.5em 0 0.5em 1.25em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.95em;
+      left: -7px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $primary-color;
+      box-shadow: 0 0 0 3px $background-color;
+    }
+  }
+
+  .cv-timeline__time {
+    flex: 0 0 7.5em;
+    font-family: $monospace;
+    font-size: $type-size-6;
+    line-height: 2.2;
+    color: $primary-color;
+  }
+
+  .cv-timeline__body {
+    flex: 1 1 18em;
+  }
+
+  .cv-timeline__place {
+    display: block;
+    font-size: $type-size-6;
+    color: $muted-text-color;
+  }
+}
+
+.cv-pubs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-pub {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+
+  .cv-pub__image {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .cv-pub__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cv-pub__title {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .cv-pub__authors,
+  .cv-pub__venue {
+    font-size: $type-size-6;
+  }
+
+  .cv-pub__venue {
+    color: $muted-text-color;
+  }
+
+  .cv-pub__abstract {
+    margin-top: 0.5em;
+    font-size: $type-size-6;
+
+    summary {
+      cursor: pointer;
+      color: $primary-color;
+    }
+
+    p {
+      margin: 0.5em 0 0;
+      font-size: inherit;
+      text-align: justify;
+    }
+  }
+
+  @include breakpoint(max-width $small - 1px) {
+    flex-direction: column;
+
+    .cv-pub__image {
+      width: 100%;
+      height: 140px;
+    }
+  }
+}
+
+.cv-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+  gap: 1em;
+
+  h3 {
+    margin: 0 0 0.5em;
+    font-size: $type-size-5;
+  }
+}
+
+.cv-skills__group {
+  padding: 1em;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+}
+
+.cv-skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: $type-size-6;
+
+  li {
+    margin: 0;
+    padding: 0.15em 0.6em;
+    border: 1px solid $border-color;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.cv-skills__legend {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+}
+
+.cv-level {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.35em;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+
+  &--expert {
+    background: $primary-color;
+  }
+
+  &--advanced {
+    background: linear-gradient(90deg, $primary-color 50%, transparent 50%);
+  }
+}
+
+@media print {
+  .cv__actions,
+  .cv-pub__abstract,
+  .cv-pub__image {
+    display: none;
+  }
+
+  .cv-pub,
+  .cv-skills__group {
+    break-inside: avoid;
+  }
+}
