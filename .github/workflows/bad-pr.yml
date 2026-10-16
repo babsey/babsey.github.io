@@ -14,7 +14,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 1
@@ -38,7 +38,7 @@ jobs:
           labels: |
             Type: Invalid
             Type: Spam
-      - uses: superbrothers/close-pull-request@v3
+      - uses: superbrothers/close-pull-request@9c18513d320d7b2c7185fb93396d0c664d5d8448 # v3.1.2
         if: steps.config.outputs.customized == 'false'
         with:
           # Optional. Post an issue comment just before closing a pull request.
@@ -47,7 +47,7 @@ jobs:
 
               [1]: https://mmistakes.github.io/minimal-mistakes/
               [2]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
-      - uses: sudo-bot/action-pull-request-lock@v2
+      - uses: sudo-bot/action-pull-request-lock@e20c54d0f068b0b2cf3b345e0585c10ac5d5415a # v2
         if: steps.config.outputs.customized == 'false'
         with:
           github-token: ${{ github.token }}
