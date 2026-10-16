@@ -26,5 +26,5 @@ Then open <http://localhost:4000>.
 ## Deployment
 
 `.github/workflows/pages.yml` builds the site with Jekyll 4 and deploys it to GitHub Pages on every
-push to `master`. In the repository settings, set **Pages → Build and deployment → Source** to
+push to `main`. In the repository settings, set **Pages → Build and deployment → Source** to
 **GitHub Actions**.
