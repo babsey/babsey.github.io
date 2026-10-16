@@ -10,6 +10,20 @@ toc_sticky: true
   <a href="#" class="btn btn--inverse" onclick="window.print(); return false;"><i class="fas fa-print" aria-hidden="true"></i> Print / save as PDF</a>
 </p>
 
+<h2 id="profile">Profile</h2>
+<p class="cv-profile">
+  Full-stack developer and DevOps engineer with experience since 2009 in building, shipping and operating
+  web applications. Lead developer of NEST Desktop (Vue, TypeScript, Python), with containerised
+  deployments on Rancher, OpenShift and OpenStack. Works with AI coding agents in day-to-day
+  development. PhD in computational neuroscience.
+</p>
+<p class="cv-profile__meta">
+  <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Freiburg im Breisgau, Germany</span>
+  <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:spreizer@web.de">spreizer@web.de</a></span>
+  <span><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/babsey">github.com/babsey</a></span>
+</p>
+<p class="cv-profile__looking"><strong>Looking for:</strong> full-stack, DevOps or agentic coding roles in Freiburg or remote.</p>
+
 <h2 id="work">Work experience</h2>
 <ol class="cv-timeline">
   {% for w in site.data.work %}
@@ -28,6 +42,33 @@ toc_sticky: true
   </li>
   {% endfor %}
 </ol>
+
+<h2 id="skills">Skills</h2>
+<p class="cv-skills__legend">
+  <span class="cv-level cv-level--expert" aria-hidden="true"></span> expert
+  <span class="cv-level cv-level--advanced" aria-hidden="true"></span> advanced
+  <span class="cv-level cv-level--beginner" aria-hidden="true"></span> beginner
+</p>
+<div class="cv-skills">
+  {% assign skill_order = "Programming language|Web development|Server architecture|Server infrastructure|Virtualization software|Development environment|Database management system|Version control system|Data visualization|Data analysis|Desktop/mobile development" | split: "|" %}
+  {% assign skill_groups = "" | split: "" %}
+  {% for t in skill_order %}{% assign g = site.data.skills | where: "title", t %}{% assign skill_groups = skill_groups | concat: g %}{% endfor %}
+  {% for s in site.data.skills %}{% unless skill_order contains s.title %}{% assign skill_groups = skill_groups | push: s %}{% endunless %}{% endfor %}
+  {% for s in skill_groups %}
+  <section class="cv-skills__group">
+    <h3>{{ s.title }}</h3>
+    <ul class="cv-skills__list">
+      {% for item in s.items %}
+      <li class="cv-skill cv-skill--{{ item.level }}" title="{{ item.level }}">
+        <span class="cv-level cv-level--{{ item.level }}" aria-hidden="true"></span>
+        <a href="{{ item.url | default: item.link }}">{{ item.title | default: item.name }}</a>
+        <span class="screen-reader-text">({{ item.level }})</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
 
 <h2 id="education">Education</h2>
 <ol class="cv-timeline">
@@ -66,26 +107,3 @@ toc_sticky: true
   </li>
   {% endfor %}
 </ol>
-
-<h2 id="skills">Skills</h2>
-<p class="cv-skills__legend">
-  <span class="cv-level cv-level--expert" aria-hidden="true"></span> expert
-  <span class="cv-level cv-level--advanced" aria-hidden="true"></span> advanced
-  <span class="cv-level cv-level--beginner" aria-hidden="true"></span> beginner
-</p>
-<div class="cv-skills">
-  {% for s in site.data.skills %}
-  <section class="cv-skills__group">
-    <h3>{{ s.title }}</h3>
-    <ul class="cv-skills__list">
-      {% for item in s.items %}
-      <li class="cv-skill cv-skill--{{ item.level }}" title="{{ item.level }}">
-        <span class="cv-level cv-level--{{ item.level }}" aria-hidden="true"></span>
-        <a href="{{ item.url | default: item.link }}">{{ item.title | default: item.name }}</a>
-        <span class="screen-reader-text">({{ item.level }})</span>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
-</div>

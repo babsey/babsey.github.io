@@ -19,9 +19,9 @@ locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
 title                    : "Sebastian Spreizer"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Full-stack · DevOps · Agentic coding" # site tagline that appears below site title in masthead
 name                     : "Sebastian Spreizer"
-description              : "Personal website of Sebastian Spreizer: computational neuroscience, NEST Desktop and web-based tools for spiking neural network simulation."
+description              : "Sebastian Spreizer: full-stack developer and DevOps engineer in Freiburg, Germany. Vue, TypeScript, Python, Docker, Kubernetes platforms and agentic coding. Open to new roles."
 url                      : "https://babsey.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "babsey/babsey.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -117,9 +117,9 @@ analytics:
 author:
   name             : "Sebastian Spreizer"
   avatar           : "https://avatars.githubusercontent.com/u/620984?v=4"
-  bio              : "Research software engineer in computational neuroscience. Developer of NEST and NEST Desktop."
+  bio              : "Full-stack developer & DevOps engineer. Lead developer of NEST Desktop. Open to new roles in Freiburg."
   location         : "Freiburg, Germany"
-  email            :
+  email            : "spreizer@web.de"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
     - label: "GitHub"

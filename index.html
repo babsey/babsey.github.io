@@ -1,33 +1,63 @@
 ---
 layout: splash
 title: "Sebastian Spreizer"
-excerpt: "Computational neuroscience, spiking neural networks and web-based tools that make simulation accessible."
+excerpt: "Full-stack developer & DevOps engineer in Freiburg. Building, shipping and running web applications since 2009, from Vue frontends and Python APIs to containerised deployments on Kubernetes-based platforms."
 header:
   overlay_color: "#0b3d5c"
   actions:
-    - label: "Explore projects"
-      url: "/projects/"
-    - label: "CV"
+    - label: "Get in touch"
+      url: "mailto:spreizer@web.de"
+    - label: "View CV"
       url: "/cv/"
     - label: "GitHub"
       url: "https://github.com/babsey"
-feature_row:
+strengths:
+  - title: "Full-stack"
+    excerpt: |
+      End-to-end owner of **NEST Desktop**: a Vue 3 / Vuetify / TypeScript frontend, Python backends
+      (FastAPI, Flask, Django) and interactive data visualisation with D3.js, Plotly.js and Three.js.
+
+      <span class="tag">Vue</span> <span class="tag">TypeScript</span> <span class="tag">Python</span> <span class="tag">FastAPI</span> <span class="tag">D3.js</span>
+  - title: "DevOps"
+    excerpt: |
+      Packaging and running services with Docker and Apptainer, deploying on Rancher, OpenShift and
+      OpenStack behind nginx, and maintaining Linux servers and Git/GitHub-based development workflows.
+
+      <span class="tag">Docker</span> <span class="tag">Rancher</span> <span class="tag">OpenShift</span> <span class="tag">nginx</span> <span class="tag">Linux</span>
+  - title: "Agentic coding"
+    excerpt: |
+      Working with AI coding agents to plan, implement, review and ship changes, and building
+      code generation tools such as **Code Graph**. This website was rebuilt that way.
+
+      <span class="tag">AI agents</span> <span class="tag">Code generation</span> <span class="tag">Code review</span>
+projects:
   - title: "NEST Desktop"
-    excerpt: "A web-based GUI for the NEST Simulator: build, run and explore spiking neural network models in the browser, without writing code."
+    excerpt: "Web app for building and running neural network simulations in the browser. Used in university teaching and available on the EBRAINS research infrastructure. Lead developer since 2019."
     url: "https://github.com/nest-desktop/nest-desktop"
-    btn_label: "View on GitHub"
+    btn_label: "Source"
     btn_class: "btn--primary"
-  - title: "Spatio-temporal activity sequences"
-    excerpt: "Simulation code for spatio-temporal activity sequences in spiking neuronal networks."
-    url: "https://github.com/babsey/spatio-temporal-activity-sequence"
-    btn_label: "View code"
+  - title: "NEST Desktop on Rancher"
+    excerpt: "Deployment setup for running NEST Desktop and its simulation backend on a Rancher-managed cluster."
+    url: "https://github.com/babsey/nest-desktop-rancher"
+    btn_label: "Source"
     btn_class: "btn--primary"
   - title: "Code Graph"
-    excerpt: "A modular, node-based code generator written in TypeScript."
+    excerpt: "Modular code generator in TypeScript: compose nodes into a graph and generate runnable code from it."
     url: "https://github.com/babsey/code-graph"
-    btn_label: "View code"
+    btn_label: "Source"
     btn_class: "btn--primary"
 ---
 
-{% include feature_row %}
+<div class="open-to-work">
+  <span class="open-to-work__dot" aria-hidden="true"></span>
+  <p><strong>Open to new roles</strong> in full-stack development, DevOps and agentic coding, in Freiburg im Breisgau or remote.
+  <a href="mailto:spreizer@web.de">spreizer@web.de</a></p>
+</div>
 
+<h2 class="section-title">What I bring</h2>
+{% include feature_row id="strengths" %}
+
+<h2 class="section-title">Selected projects</h2>
+{% include feature_row id="projects" %}
+
+<p class="home-more"><a href="{{ '/projects/' | relative_url }}" class="btn btn--inverse">All projects</a> <a href="{{ '/cv/' | relative_url }}" class="btn btn--inverse">Full CV</a></p>
