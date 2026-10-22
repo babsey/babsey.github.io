@@ -105,6 +105,7 @@ social:
   links: # An array of links to social media profiles
     - "https://github.com/babsey"
     - "https://www.linkedin.com/in/sebastian-spreizer"
+    - "https://orcid.org/0000-0002-7720-9211"
 
 # Analytics
 analytics:
